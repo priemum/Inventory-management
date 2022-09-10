@@ -24,7 +24,7 @@ const transporter = nodemailer.createTransport({
     host:"smtp.gmail.com"
 })
 
-const mongoURI="mongodb+srv://admin-tushar:tushar123@cluster0.bry27q8.mongodb.net/InventDB"
+const mongoURI=process.env.MONGO_URL;
 
 mongoose.connect(mongoURI,{
     useNewUrlParser: true,
